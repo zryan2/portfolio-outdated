@@ -1,0 +1,98 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Use jQuery to add a container to prevent scrolling until "Start Here" is clicked*/
+.StopScrolling{
+    margin:0;
+    height:100%;
+    overflow:hidden;
+}
+
+.BackgroundOne {
+    width: 100%; 
+    height: 100vh;
+    background-image: url("../images/BlueGradient.jpg");
+}
+
+.HarshContainer{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.HarshContainer h1{
+    font-size: 177px;
+    font-family: Antonio;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+.HarshContainer h1:hover{
+    background-image: url("../images/WaveOne.png");
+    background-repeat: repeat-x;
+    -webkit-background-clip:text;
+    animation: animate 10s linear infinite;
+    color: rgba(255,255,255,.2);
+}
+
+@keyframes animate
+
+{
+    0%
+    {
+        background-position: left 0px top 130px;
+    }
+    
+     40%
+    {
+        background-position: left 800px top -25px;
+    }
+   
+     80%
+    {
+        background-position: left 1800px top -25px;
+    }
+    
+    80%
+    {
+        background-position: static;
+    }
+
+}
+
+.Patel {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    left: 55.5%;
+    top: 55.2%;
+}
+
+.Patel img{
+    width: 200px;
+     
+}
+
+.StartHere {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 75%;
+    left: 70%;
+}
+
+.StartHere img{
+    width: 300px;
+}
+
+
+
+
+
+
+
