@@ -3,7 +3,10 @@ Made by Harsh Patel & Ryan Zeng
 
 # Languages and Tools:
 Mark up: HTML, CSS
-Scripting: JavaScript
+<br>Scripting: JavaScript</br>
 Library: jQuery
+
+# Preview
+TODO: Screenshots and Link
 
  
