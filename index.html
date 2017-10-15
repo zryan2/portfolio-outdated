@@ -9,7 +9,7 @@
      
  </head>
  <body style="margin: 0; overflow:hidden; height:100%" >
-     <div class="BackgroundOne" style="">
+     <div class="BackgroundOne">
          
          <!-- TODO: Distribute bubble overlaps -->
         <div class='bubbles' id='bubble-1'></div>
@@ -33,13 +33,17 @@
         <div class="Patel"><img src="images/Patel.png"></div>
         <div class="StartHere"><img src = "images/StartHere.png" onmouseout= "this.src = 'images/StartHere.png'"></div>
 
-        <!--TODO: Add drawing/gif after clicking StartHere -->
+        <!--TODO: Add drawing/gif after clicking StartHere AND hover image-->
         <script type="text/javascript"> 
             $(".StartHere").click(function(){
-                $('body').css( "height", "100%").css( "overflow", "auto");
+                $('body').css( "height", "5000px").css( "overflow", "auto");
             });
         </script>
 
+     </div>
+     <!-- temporary div -->
+     <div class="BackgroundTwo">
+        <img src="images/groot.gif"/>
      </div>
 </body>
     
