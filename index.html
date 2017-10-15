@@ -3,25 +3,43 @@
  <head>
     <title>Harsh Patel</title>
     <link rel="stylesheet" href="css/Styles.css">
-     
+    <link rel="stylesheet" href= "css/Bubbles.css">
      <!--Calles jQuery Library-->
     <script type = "text/javascript" src="jquery-3.2.1.js"></script>
      
  </head>
- <body style="margin: 0;" >
-     <div class="StopScrolling"></div>
-     <div  class="BackgroundOne">
-         <div class = "HarshContainer"><h1>HARSH</h1></div>
-         <div class="Patel"><img src="images/Patel.png"></div>
-         <div class="StartHere"><img src = "images/StartHere.png" onmouseout= "this.src = 'images/StartHere.png'"></div>
+ <body style="margin: 0; overflow:hidden; height:100%" >
+     <div class="BackgroundOne" style="">
          
-         <!--TODO: Add functionality to click the "Start Here" button -->
-         <script type="text/javascript"> 
-             $(".StartHere").click(function(){
-                
-             });
-         </script>
-     
+         <!-- TODO: Distribute bubble overlaps -->
+        <div class='bubbles' id='bubble-1'></div>
+        <div class='bubbles' id='bubble-2'></div>
+        <div class='bubbles' id='bubble-3'></div>
+        <div class='bubbles' id='bubble-4'></div>
+        <div class='bubbles' id='bubble-5'></div>
+        <div class='bubbles' id='bubble-6'></div>
+        <div class='bubbles' id='bubble-7'></div>
+        <div class='bubbles' id='bubble-8'></div>
+        <div class='bubbles' id='bubble-9'></div>
+        <div class='bubbles' id='bubble-10'></div>
+        <div class='bubbles' id='bubble-11'></div>
+        <div class='bubbles' id='bubble-12'></div>
+        <div class='bubbles' id='bubble-13'></div>
+        <div class='bubbles' id='bubble-14'></div>
+        <div class='bubbles' id='bubble-15'></div>
+         
+         
+        <div class = "HarshContainer"><h1>HARSH</h1></div>
+        <div class="Patel"><img src="images/Patel.png"></div>
+        <div class="StartHere"><img src = "images/StartHere.png" onmouseout= "this.src = 'images/StartHere.png'"></div>
+
+        <!--TODO: Add drawing/gif after clicking StartHere -->
+        <script type="text/javascript"> 
+            $(".StartHere").click(function(){
+                $('body').css( "height", "100%").css( "overflow", "auto");
+            });
+        </script>
+
      </div>
 </body>
     
