@@ -8,5 +8,5 @@ Library: jQuery
 
 # Preview
 TODO: Screenshots and Link
-
+Temp. Demo: https://zryan2.github.io/portfolio-official/
  
