@@ -1,19 +1,16 @@
-.body {
+.body{
     margin: 0;
-    padding: 0;
-}
-
-/*Use jQuery to add a container to prevent scrolling until "Start Here" is clicked*/
-.StopScrolling{
-    margin:0;
-    height:100%;
-    overflow:hidden;
 }
 
 .BackgroundOne {
     width: 100%; 
     height: 100vh;
     background-image: url("../images/BlueGradient.jpg");
+    display: inline-block;
+    overflow:hidden;
+    display: inline-block;
+      float: left;
+
 }
 
 .HarshContainer{
