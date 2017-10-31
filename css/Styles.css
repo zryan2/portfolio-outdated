@@ -75,15 +75,15 @@
      
 }
 
-.StartHere {
+#startContainer {
     margin: 0px;
     padding: 0px;
     position: absolute;
-    top: 75%;
+    top: 68%;
     left: 70%;
 }
 
-.StartHere img{
+#startImg img{
     width: 300px;
 }
 
