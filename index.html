@@ -1,51 +1,97 @@
 <!DOCTYPE html>
 <html>
  <head>
-    <title>Harsh Patel</title>
+    <title>First Last</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Styles.css">
     <link rel="stylesheet" href= "css/Bubbles.css">
-     <!--Calles jQuery Library-->
-    <script type = "text/javascript" src="jquery-3.2.1.js"></script>
-     
+    
+     <!--Calls jQuery Library-->
+     <script type = "text/javascript" src="jquery-3.2.1.js"></script>
+
  </head>
- <body style="margin: 0; overflow:hidden; height:100%" >
-     <div class="BackgroundOne">
-         
-         <!-- TODO: Distribute bubble overlaps -->
-        <div class='bubbles' id='bubble-1'></div>
-        <div class='bubbles' id='bubble-2'></div>
-        <div class='bubbles' id='bubble-3'></div>
-        <div class='bubbles' id='bubble-4'></div>
-        <div class='bubbles' id='bubble-5'></div>
-        <div class='bubbles' id='bubble-6'></div>
-        <div class='bubbles' id='bubble-7'></div>
-        <div class='bubbles' id='bubble-8'></div>
-        <div class='bubbles' id='bubble-9'></div>
-        <div class='bubbles' id='bubble-10'></div>
-        <div class='bubbles' id='bubble-11'></div>
-        <div class='bubbles' id='bubble-12'></div>
-        <div class='bubbles' id='bubble-13'></div>
-        <div class='bubbles' id='bubble-14'></div>
-        <div class='bubbles' id='bubble-15'></div>
-         
-         
-        <div class = "HarshContainer"><h1>HARSH</h1></div>
-        <div class="Patel"><img src="images/Patel.png"></div>
-        <div class="StartHere"><img src = "images/StartHere.png" onmouseout= "this.src = 'images/StartHere.png'"></div>
-
-        <!--TODO: Add drawing/gif after clicking StartHere AND hover image-->
-        <script type="text/javascript"> 
-            $(".StartHere").click(function(){
-                $('body').css( "height", "5000px").css( "overflow", "auto");
-            });
-        </script>
-
-     </div>
-     <!-- temporary div -->
-     <div class="BackgroundTwo">
-        <img src="images/groot.gif"/>
-     </div>
-</body>
     
-    
+<!-- DO NOT REMOVE: Body tag with style to prevent scrolling -->
+<!-- <body style="margin: 0; overflow:hidden; height:100%" >-->
+     <body>
+         <div id="StrokeContainer" style="position:absolute; top:0%; z-index: 100; left:25%;">
+                <svg id="svgLine" style="
+                  postion:absolute;
+                  top: 15%;
+                  width:800px;
+                  height: 3000px;">
+                    <!-- width,height -->
+                  <path fill="none" stroke="red" stroke-width="8" id="scrollLine"
+                        d="M400,325 L350,325 
+                           C350,325 900,300 200,625 
+                           C200,625 -300,850 400,1000 
+                           C400,1000 1100,1100 200,1500  
+                           L300,5000"/>
+                </svg>
+
+                <script>
+                // Get the id of the <path> element and the length of <path>
+                var scrollLine = document.getElementById("scrollLine");
+                var length = scrollLine.getTotalLength();
+                // The start position of the drawing
+                scrollLine.style.strokeDasharray = length;
+                // Hide the scrollLine by offsetting dash. Remove this line to show the scrollLine before scroll draw
+                scrollLine.style.strokeDashoffset = length;
+                // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+                window.addEventListener("scroll", myFunction);
+                function myFunction() {
+                  var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+                  var draw = length * scrollpercent;
+                  // Reverse the drawing (when scrolling upwards)
+                  scrollLine.style.strokeDashoffset = length - draw;
+                }
+                </script>
+         </div>
+         <!--Div that holds the first page-->
+         <div class="BackgroundOne">
+
+             <!-- TODO: Distribute bubble overlaps -->
+            <div class='bubbles' id='bubble-1'></div>
+            <div class='bubbles' id='bubble-2'></div>
+            <div class='bubbles' id='bubble-3'></div>
+            <div class='bubbles' id='bubble-4'></div>
+            <div class='bubbles' id='bubble-5'></div>
+            <div class='bubbles' id='bubble-6'></div>
+            <div class='bubbles' id='bubble-7'></div>
+            <div class='bubbles' id='bubble-8'></div>
+            <div class='bubbles' id='bubble-9'></div>
+            <div class='bubbles' id='bubble-10'></div>
+            <div class='bubbles' id='bubble-11'></div>
+            <div class='bubbles' id='bubble-12'></div>
+            <div class='bubbles' id='bubble-13'></div>
+            <div class='bubbles' id='bubble-14'></div>
+            <div class='bubbles' id='bubble-15'></div>
+
+
+            <div id="fName" class = "NameContainer"><h1>HARSH</h1></div>
+            <div class="lName"><img src="images/Patel.png"></div>
+            <div id="startContainer">
+                <img id="startImage" src = "images/StartHere.png">
+            </div>
+
+            <!--TODO: Add drawing/gif after clicking startImage-->
+            <script>
+                $("#startImage").click(function(){
+                    $('body').css( "height", "2000px").css( "overflow", "auto");
+                });
+                $("#startImage").hover(function(){
+                    $(this).attr("src","images/StartHere(Hover).png");
+                }, function(){
+                    $(this).attr("src","images/StartHere.png");
+                });
+            </script>
+
+         </div>
+
+         <!-- temporary div -->
+         <div class="BackgroundTwo">
+            <img src="images/groot.gif"/>
+         </div>
+    </body>
 </html>
